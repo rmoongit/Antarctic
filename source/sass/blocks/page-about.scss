@@ -1,0 +1,27 @@
+.page-about {
+  min-height: 566px;
+}
+
+.page-about__wrapper {
+  display: grid;
+  grid-template-columns: 45% 48%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-about__text {
+  grid-column: 1/1;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.page-about__photo {
+  grid-column: 2/-2;
+}

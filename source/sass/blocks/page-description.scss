@@ -1,0 +1,49 @@
+.page-description {
+  margin-top: 210px;
+
+  @include vp-1023 {
+    margin-top: 230px;
+  }
+
+  @include vp-767 {
+    margin-top: 113px;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 54px;
+    color: $alice-blue;
+    line-height: 66px;
+    text-shadow: $shadow;
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    color: $alice-blue;
+    font-size: 20px;
+    line-height: 24px;
+    text-shadow: $shadow;
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.page-header {
+  padding-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition-property: background bottom; // to do
+  transition-duration: 0.5s; // to do
+
+  a {
+    color: $alice-blue;
+    padding: 10px;
+  }
+
+  @include vp-1023 {
+    padding-top: 30px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    &--open {
+      flex-wrap: wrap;
+      padding-left: 20px;
+      padding-right: 20px;
+      position: fixed;
+      align-items: flex-start;
+      background-color: $color-default-white;
+      left: 35px;
+      right: 0;
+      top: 0;
+      height: 100%;
+
+      svg {
+        fill: $tangaroa;
+        margin-bottom: 33px;
+      }
+
+      a {
+        color: $tangaroa;
+      }
+    }
+  }
+}
