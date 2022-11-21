@@ -3,40 +3,58 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition-property: background bottom; // to do
-  transition-duration: 0.5s; // to do
-
-  a {
-    color: $alice-blue;
-    padding: 10px;
-  }
 
   @include vp-1023 {
     padding-top: 30px;
   }
 
   @include vp-767 {
+    flex-wrap: wrap;
     padding-top: 20px;
-    &--open {
-      flex-wrap: wrap;
-      padding-left: 20px;
-      padding-right: 20px;
-      position: fixed;
-      align-items: flex-start;
-      background-color: $color-default-white;
-      left: 35px;
-      right: 0;
+
+    &::before {
+      position: absolute;
       top: 0;
-      height: 100%;
+      right: 100%;
+      bottom: 0;
+      width: 100vw;
+      background-color: $color-tangaroa-background;
+      pointer-events: none;
+    }
+  }
+}
 
-      svg {
-        fill: $tangaroa;
-        margin-bottom: 33px;
-      }
+.page-header.is-active {
+  @include vp-767 {
+    transition-property: background-color;
+    transition-duration: 0.6s;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    z-index: 5;
+    align-items: flex-start;
+    background: $color-default-white;
+    left: auto;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 285px;
 
-      a {
-        color: $tangaroa;
-      }
+    &::before {
+      content: "";
+    }
+
+    svg {
+      fill: $color-tangaroa;
+      margin-bottom: 33px;
+    }
+
+    a {
+      color: $color-tangaroa;
+    }
+
+    & + .page-main__page-description {
+      opacity: 0;
     }
   }
 }

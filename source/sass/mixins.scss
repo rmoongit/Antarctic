@@ -56,6 +56,28 @@
   }
 }
 
+@mixin custom-scrollbar($color-thumb, $color-track) {
+  scrollbar-color: $color-thumb $color-track;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: $color-track;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-track;
+    border: 2px solid $color-alice-blue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-thumb;
+    border: none;
+    border-radius: 2px;
+  }
+}
+
 // Mobile first
 
 // @mixin vp-375 {

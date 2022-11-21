@@ -1,21 +1,21 @@
 .page-main {
   position: relative;
   min-height: 650px;
-  background-image: url(../img/main.jpg);
-  background-color: $tangaroa;
+  background-image: url("../img/main.jpg");
+  background-color: $color-tangaroa;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 120px;
 
   @include vp-1023 {
     min-height: 636px;
-    background-image: url(../img/main-tablet.jpg);
+    background-image: url("../img/main-tablet.jpg");
     margin-bottom: 100px;
   }
 
   @include vp-767 {
     min-height: 500px;
-    background-image: url(../img/main-mobile.jpg);
+    background-image: url("../img/main-mobile.jpg");
     margin-bottom: 65px;
   }
 }

@@ -1,0 +1,97 @@
+.page-benefits {
+  padding: 120px 0;
+  min-height: 562px;
+  background-color: $color-solitude;
+  background-image: url("../img/benefits.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1023 {
+    padding: 100px 0;
+    background-image: url("../img/benefits-tablet.png");
+  }
+
+  @include vp-767 {
+    background-image: url("../img/benefits-mobile.png");
+    padding: 65px 0;
+  }
+}
+
+.page-benefits__wrapper {
+  h3 {
+    color: $color-tangaroa;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+  }
+}
+
+.page-benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    gap: 23px;
+  }
+}
+
+.page-benefits__item {
+  position: relative;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
+  width: 31%;
+  padding: 87px 32px 50px 30px;
+  min-height: 241px;
+
+  br {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 76px 13px 25px 20px;
+    min-height: 310px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("../img/sprite.svg#vessel");
+    background-size: cover;
+    width: 44px;
+    height: 32px;
+    top: 0;
+    left: 0;
+  }
+
+  h4 {
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

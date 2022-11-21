@@ -1,5 +1,14 @@
 .page-about {
-  min-height: 566px;
+  min-height: 301px;
+  margin-bottom: 145px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 85px;
+  }
 }
 
 .page-about__wrapper {
@@ -7,21 +16,51 @@
   grid-template-columns: 45% 48%;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1023 {
+    align-items: start;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
 }
 
 .page-about__text {
   grid-column: 1/1;
 
   h2 {
+    font-weight: 600;
+    color: $color-tangaroa;
     margin: 0;
     margin-bottom: 40px;
+
+    br {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
+    }
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 36px;
+      margin-bottom: 30px;
+    }
   }
 
   p {
     margin: 0;
+
+    @include vp-767 {
+      margin-bottom: 50px;
+    }
   }
 }
 
 .page-about__photo {
   grid-column: 2/-2;
+  margin: 0 auto;
 }

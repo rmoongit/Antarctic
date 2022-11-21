@@ -1,0 +1,139 @@
+.page-order__wrapper {
+  padding-top: 95px;
+  padding-bottom: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  h3 {
+    color: $color-tangaroa;
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.page-order__list {
+  display: grid;
+  grid-template-columns: repeat(4, 22.7%);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 47.7%);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+  }
+}
+
+.page-order__item {
+  position: relative;
+  height: 386px;
+  background-color: $color-tangaroa;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 35px 25px;
+
+  h4 {
+    position: relative;
+    z-index: 5;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  @include vp-1023 {
+    padding: 35px 35px;
+  }
+}
+
+.page-order__item:hover {
+  img {
+    display: none;
+  }
+
+  .page-order__inner {
+    display: block;
+  }
+}
+
+.page-order__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.page-order__inner {
+  padding-top: 25px;
+  margin: 0;
+  display: none;
+  overflow-y: auto;
+
+  @include custom-scrollbar($color-link-water, $color-link-water);
+
+  dl {
+    margin: 0;
+  }
+
+  dt {
+    font-weight: 500;
+  }
+
+  dd {
+    color: $color-quartz;
+    margin: 0;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.page-order__link {
+  display: inline-block;
+  text-align: center;
+  background-color: $color-alice-blue;
+  width: 100%;
+  color: $color-tangaroa;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  padding: 10px;
+}

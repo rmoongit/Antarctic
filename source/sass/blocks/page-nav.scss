@@ -1,8 +1,13 @@
 .page-nav {
   @include vp-767 {
-    height: 100%;
-    width: auto;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
   }
+}
+
+.page-nav.is-active {
+  height: 100%;
 }
 
 .page-nav__list {
@@ -14,13 +19,14 @@
   column-gap: 33px;
   row-gap: 10px;
 
-  @include vp-767 {
-    display: none;
+  @include vp-1023 {
+    column-gap: 23px;
+  }
 
-    &--open {
-      display: flex;
-      flex-direction: column;
-    }
+  @include vp-767 {
+    flex-direction: column;
+    margin-left: 2px;
+    margin-top: 12px;
   }
 }
 
@@ -29,10 +35,17 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    color: $color-alice-blue;
+    padding: 10px;
 
     @include vp-1023 {
       font-size: 14px;
       line-height: 17px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }
