@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initOpenMenu} from './modules/burger';
+import {initMap} from './modules/map';
 
 // ---------------------------------
 
@@ -16,10 +17,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initOpenMenu();
 
+  initMap('map', {
+    // При инициализации карты обязательно нужно указать
+    // её центр и коэффициент масштабирования.
+    center: [55.76, 37.64], // Москва
+    zoom: 10,
+  });
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+
     initModals();
+
   });
 });
 

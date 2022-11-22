@@ -45,20 +45,11 @@
 }
 
 .page-benefits__item {
-  position: relative;
   background-color: $color-alice-blue;
   color: $color-tangaroa;
   width: 31%;
   padding: 87px 32px 50px 30px;
   min-height: 241px;
-
-  br {
-    display: none;
-
-    @include vp-1023 {
-      display: block;
-    }
-  }
 
   @include vp-1023 {
     padding: 76px 13px 25px 20px;
@@ -70,28 +61,61 @@
     min-height: 250px;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    background: url("../img/sprite.svg#vessel");
-    background-size: cover;
-    width: 44px;
-    height: 32px;
-    top: 0;
-    left: 0;
-  }
-
   h4 {
     font-weight: 500;
     margin: 0;
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 27px;
+
+    br {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
+    }
   }
 
   p {
     margin: 0;
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+.page-benefits__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("../img/sprite.svg#vessel");
+    background-size: cover;
+    width: 27px;
+    height: 32px;
+    top: 30px;
+    left: 30px;
+
+    @include vp-1023 {
+      top: 20px;
+      left: 20px;
+      height: 21px;
+      width: 26px;
+    }
+  }
+
+  &--second::before {
+    background: url("../img/sprite.svg#double-tick");
+    width: 38px;
+  }
+
+  &--third::before {
+    background: url("../img/sprite.svg#vessel-zodiac");
+    width: 44px;
+
+    @include vp-1023 {
+      width: 36px;
+    }
   }
 }

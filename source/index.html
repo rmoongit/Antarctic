@@ -97,13 +97,13 @@
                 и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
             </li>
 
-            <li class="page-benefits__item">
+            <li class="page-benefits__item page-benefits__item--second">
               <h4>Система <br> все включено</h4>
               <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;.<br> Великолепные блюда
                 и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
             </li>
 
-            <li class="page-benefits__item">
+            <li class="page-benefits__item page-benefits__item--third">
               <h4>Экскурсионные <br> туры на&nbsp;Zodiac</h4>
               <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiack
                 c&nbsp;опытными экскурсоводами.</p>
@@ -365,6 +365,59 @@
         </div>
       </section>
 
+      <section class="page-booking">
+        <div class="page-booking__wrapper container">
+
+          <div class="page-booking__present">
+            <h3>Раннее бронирование</h3>
+            <p>Забронируйте тур <br> за&nbsp;3-6 месяцев
+              до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          </div>
+
+          <form class="page-form page-booking__form" action="https://echo.htmlacademy.ru">
+            <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся <br> с&nbsp;вами в&nbsp;ближайшее время</p>
+
+            <div class="page-form__inner">
+              <label class="page-form__data" for="name">
+                <input type="text" name="name" id="name" placeholder="Имя" required>
+              </label>
+
+              <label class="page-form__data" for="phone">
+                <input type="number" name="tel" id="phone" placeholder="Телефон" required>
+              </label>
+
+              <label class="page-form__data" for="mail">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+              </label>
+
+              <label class="page-form__data" for="access">
+                <input class="visually-hidden" type="checkbox" name="access" id="access" required>
+                <span></span>
+                Я&nbsp;согласен на&nbsp;обработку моих персональных данных
+              </label>
+            </div>
+
+            <input type="submit" value="Оставить заявку" required>
+          </form>
+
+        </div>
+      </section>
+
+      <section class="page-info">
+        <div class="page-info__wrapper container">
+
+          <div class="page-map" id="map"></div>
+
+          <div class="page-info__address">
+            <h5>У&nbsp;вас ещё остались вопросы или сомнения?
+              Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</h5>
+
+            <p>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
+            <a href="tel:88002000000">8-800-200-00-00</a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer>
@@ -372,8 +425,10 @@
     </footer>
   </div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
+
 </body>
 
 </html>

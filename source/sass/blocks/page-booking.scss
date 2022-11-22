@@ -1,0 +1,87 @@
+.page-booking {
+  min-height: 555px;
+  background-image: url("../img/order.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top;
+
+  @include vp-1023 {
+    background-image: url("../img/order-tablet.jpg");
+  }
+
+  @include vp-767 {
+    background-image: url("../img/order-mobile.jpg");
+  }
+}
+
+.page-booking__wrapper {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 140px;
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+.page-booking__present {
+  color: $color-tangaroa;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+
+    @include vp-1023 {
+      font-size: 34px;
+      line-height: 51px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 27px;
+    width: 352px;
+
+    br {
+      display: none;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 60px;
+      text-align: center;
+      width: 100%;
+      padding: 0 144px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0 16px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+}
