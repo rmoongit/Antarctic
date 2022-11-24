@@ -1,24 +1,22 @@
 .page-order__wrapper {
-  padding-top: 95px;
-  padding-bottom: 120px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 85px;
+  padding-bottom: 121px;
+  padding-left: 60px;
+  padding-right: 60px;
   color: $color-alice-blue;
 
   @include vp-1023 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 90px 60px 100px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding: 57px 25px 65px;
   }
 
   h3 {
     color: $color-tangaroa;
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 49px;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
@@ -32,13 +30,14 @@
     @include vp-767 {
       font-size: 24px;
       line-height: 36px;
+      margin-bottom: 30px;
     }
   }
 }
 
 .page-order__list {
   display: grid;
-  grid-template-columns: repeat(4, 22.7%);
+  grid-template-columns: repeat(4, 23%);
   gap: 30px;
   margin: 0;
   padding: 0;
@@ -59,7 +58,7 @@
   background-color: $color-tangaroa;
   font-size: 14px;
   line-height: 20px;
-  padding: 35px 25px;
+  padding: 30px 25px 20px 25px;
 
   h4 {
     position: relative;
@@ -79,7 +78,11 @@
   }
 
   @include vp-1023 {
-    padding: 35px 35px;
+    padding: 30px 35px 29px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 17px;
   }
 }
 
@@ -91,6 +94,10 @@
   .page-order__inner {
     display: block;
   }
+
+  .page-order__container {
+    justify-content: flex-start;
+  }
 }
 
 .page-order__container {
@@ -101,7 +108,7 @@
 }
 
 .page-order__inner {
-  padding-top: 25px;
+  padding-top: 11px;
   margin: 0;
   display: none;
   overflow-y: auto;
@@ -119,10 +126,10 @@
   dd {
     color: $color-quartz;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 
     &:last-child {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
   }
 }

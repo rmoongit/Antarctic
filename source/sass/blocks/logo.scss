@@ -1,10 +1,6 @@
 .logo {
   margin-right: auto;
 
-  @include vp-767 {
-    width: 80%;
-  }
-
   svg {
     fill: $color-alice-blue;
 

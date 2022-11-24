@@ -1,11 +1,11 @@
 .page-form {
   color: $color-alice-blue;
   background-color: $color-tangaroa;
-  padding: 50px;
+  padding: 42px 50px 50px 50px;
   width: 403px;
 
   @include vp-767 {
-    padding: 40px 30px;
+    padding: 32px 30px 38px;
     width: 100%;
   }
 
@@ -14,7 +14,16 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+
+    @include vp-767 {
+      text-align: center;
+      margin-bottom: 25px;
+
+      br {
+        display: none;
+      }
+    }
   }
 }
 
@@ -22,7 +31,7 @@
   input {
     height: 43px;
     border: none;
-    padding: 11px 15px;
+    padding: 11px 18px;
     width: 100%;
     margin-bottom: 20px;
     color: $color-tangaroa;
@@ -32,6 +41,10 @@
 
   input:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  input[type="email"] {
+    margin-bottom: 17px;
   }
 }
 
@@ -46,10 +59,17 @@
     width: 18px;
     height: 18px;
     background-color: $color-default-white;
-    left: -17px;
+    left: -12px;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 40%;
     cursor: pointer;
+
+    @include vp-767 {
+      left: -18px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   input[type="checkbox"]:checked + span {
@@ -65,14 +85,21 @@
 
 .page-form__data:last-of-type {
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 29px;
   margin-left: 24px;
+
+  @include vp-767 {
+    width: 157px;
+    margin-left: 28px;
+  }
 }
 
 input[type="submit"] {
+  font-size: 14px;
   font-weight: 600;
   padding: 11px;
   border: none;
   width: 100%;
   cursor: pointer;
+  height: 43px;
 }

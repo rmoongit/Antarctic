@@ -1,24 +1,26 @@
 .page-description {
-  margin-top: 210px;
+  margin-top: 190px;
 
   @include vp-1023 {
-    margin-top: 230px;
+    margin-top: 213px;
   }
 
   @include vp-767 {
-    margin-top: 113px;
+    margin-top: 128px;
   }
 
   h1 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+    margin-left: 100px;
     font-weight: 700;
-    font-size: 54px;
+    font-size: 53px;
     color: $color-alice-blue;
     line-height: 66px;
     text-shadow: $shadow;
 
     @include vp-1023 {
+      margin-left: 0;
       font-size: 50px;
       line-height: 61px;
     }
@@ -35,10 +37,12 @@
     line-height: 24px;
     text-shadow: $shadow;
     margin: 0;
+    margin-left: 94px;
 
     @include vp-1023 {
       font-size: 18px;
       line-height: 22px;
+      margin-left: 0;
     }
 
     @include vp-767 {

@@ -1,11 +1,3 @@
-.page-nav {
-  @include vp-767 {
-    height: 0;
-    width: 100%;
-    overflow: hidden;
-  }
-}
-
 .page-nav.is-active {
   height: 100%;
 }
@@ -36,7 +28,6 @@
     font-size: 16px;
     line-height: 20px;
     color: $color-alice-blue;
-    padding: 10px;
 
     @include vp-1023 {
       font-size: 14px;

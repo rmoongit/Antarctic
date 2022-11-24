@@ -1,3 +1,88 @@
 .page-info {
   min-height: 306px;
 }
+
+.page-info__wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: grid;
+  grid-template-columns: 560px auto;
+  column-gap: 100px;
+  align-items: center;
+
+  @include vp-1023 {
+    grid-template-columns: 324px auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    column-gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+    padding-top: 58px;
+    padding-bottom: 56px;
+  }
+}
+
+.page-info__address {
+  color: $color-tangaroa;
+
+  h5 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-1023 {
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    position: relative;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-left: 28px;
+
+    br {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 22px;
+      background: url("../img/sprite.svg#pointer");
+      top: 7px;
+      left: -28px;
+    }
+
+    @include vp-1023 {
+      br {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    margin-left: 28px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../img/sprite.svg#phone");
+      top: 0;
+      left: -28px;
+    }
+
+    @include vp-767 {
+      display: inline-block;
+      margin-bottom: 43px;
+    }
+  }
+}

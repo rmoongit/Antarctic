@@ -1,7 +1,5 @@
-let myMap;
-
 export function initMap(id, options) {
-  if (typeof yamaps === 'undefined') {
+  if (typeof ymaps === 'undefined') {
     return;
   }
 

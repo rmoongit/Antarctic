@@ -6,9 +6,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 120px;
+  padding-bottom: 50px;
 
   @include vp-1023 {
-    min-height: 636px;
+    min-height: 638px;
     background-image: url("../img/main-tablet.jpg");
     margin-bottom: 100px;
   }

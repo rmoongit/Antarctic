@@ -16,20 +16,21 @@
 
 .page-booking__wrapper {
   padding-top: 50px;
+  padding-bottom: 50px;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  column-gap: 140px;
+  column-gap: 84px;
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 88px;
     padding-bottom: 100px;
     grid-template-columns: auto;
     justify-items: center;
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 60px;
     padding-bottom: 65px;
   }
 }
@@ -39,7 +40,7 @@
 
   h3 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-left: 60px;
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
@@ -47,18 +48,21 @@
     @include vp-1023 {
       font-size: 34px;
       line-height: 51px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
+      margin-left: 0;
       text-align: center;
     }
 
     @include vp-767 {
       font-size: 24px;
       line-height: 31px;
+      margin-bottom: 13px;
     }
   }
 
   p {
     margin: 0;
+    margin-left: 60px;
     font-size: 18px;
     line-height: 27px;
     width: 352px;
@@ -68,7 +72,8 @@
     }
 
     @include vp-1023 {
-      margin-bottom: 60px;
+      margin-bottom: 52px;
+      margin-left: 0;
       text-align: center;
       width: 100%;
       padding: 0 144px;
@@ -78,6 +83,7 @@
       font-size: 16px;
       line-height: 22px;
       padding: 0 16px;
+      margin-bottom: 34px;
 
       br {
         display: block;

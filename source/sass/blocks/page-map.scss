@@ -1,4 +1,14 @@
 .page-map {
   width: 100%;
-  height: 100%;
+  height: 306px;
+  background-color: $color-tangaroa;
+
+  @include vp-1023 {
+    height: 335px;
+  }
+
+  @include vp-767 {
+    height: 316px;
+    order: 3;
+  }
 }

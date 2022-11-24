@@ -1,5 +1,5 @@
 .page-benefits {
-  padding: 120px 0;
+  padding: 110px 0;
   min-height: 562px;
   background-color: $color-solitude;
   background-image: url("../img/benefits.png");
@@ -8,13 +8,13 @@
   background-size: cover;
 
   @include vp-1023 {
-    padding: 100px 0;
+    padding: 89px 0 100px;
     background-image: url("../img/benefits-tablet.png");
   }
 
   @include vp-767 {
     background-image: url("../img/benefits-mobile.png");
-    padding: 65px 0;
+    padding: 56px 0 64px;
   }
 }
 
@@ -23,10 +23,20 @@
     color: $color-tangaroa;
     text-align: center;
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
+
+    @include vp-1023 {
+      font-size: 26px;
+      margin-bottom: 47px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -42,29 +52,36 @@
   @include vp-1023 {
     gap: 23px;
   }
+
+  @include vp-767 {
+    gap: 30px;
+  }
 }
 
 .page-benefits__item {
+  position: relative;
   background-color: $color-alice-blue;
   color: $color-tangaroa;
   width: 31%;
-  padding: 87px 32px 50px 30px;
+  padding: 80px 32px 40px 30px;
   min-height: 241px;
 
   @include vp-1023 {
-    padding: 76px 13px 25px 20px;
+    padding: 70px 13px 18px 20px;
     min-height: 310px;
+    width: 30.4%;
   }
 
   @include vp-767 {
     width: 100%;
     min-height: 250px;
+    padding-right: 22px;
   }
 
   h4 {
     font-weight: 500;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     font-size: 18px;
     line-height: 27px;
 
@@ -82,32 +99,30 @@
     font-size: 14px;
     line-height: 20px;
   }
-}
-
-.page-benefits__item {
-  position: relative;
 
   &::before {
     position: absolute;
     content: "";
     background: url("../img/sprite.svg#vessel");
-    background-size: cover;
     width: 27px;
     height: 32px;
     top: 30px;
     left: 30px;
 
     @include vp-1023 {
-      top: 20px;
+      top: 23px;
       left: 20px;
-      height: 21px;
-      width: 26px;
+      width: 21px;
     }
   }
 
   &--second::before {
     background: url("../img/sprite.svg#double-tick");
     width: 38px;
+
+    @include vp-1023 {
+      width: 26px;
+    }
   }
 
   &--third::before {
