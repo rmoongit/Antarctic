@@ -11,11 +11,11 @@
   display: flex;
   align-items: center;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 43px;
 
   @include vp-1023 {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 46px;
   }
 
   @include vp-767 {

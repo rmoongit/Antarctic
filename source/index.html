@@ -383,20 +383,20 @@
               до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
 
-          <form class="page-form" action="https://echo.htmlacademy.ru">
+          <form class="page-form" action="https://echo.htmlacademy.ru" data-form>
             <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся <br> с&nbsp;вами в&nbsp;ближайшее время</p>
 
             <div class="page-form__inner">
               <label class="page-form__data" for="name">
-                <input type="text" name="name" id="name" placeholder="Имя" required>
+                <input type="text" name="name" id="name" placeholder="Имя" data-validate="name" required>
               </label>
 
               <label class="page-form__data" for="phone">
-                <input type="number" name="tel" id="phone" placeholder="Телефон" required>
+                <input type="tel" name="tel" id="phone" placeholder="Телефон" data-validate="tel" required>
               </label>
 
               <label class="page-form__data" for="mail">
-                <input type="email" name="email" id="mail" placeholder="Email" required>
+                <input type="email" name="email" id="mail" placeholder="Email" data-validate="email" required>
               </label>
 
               <label class="page-form__data" for="access">
@@ -406,7 +406,7 @@
               </label>
             </div>
 
-            <input type="submit" value="Оставить заявку">
+            <input type="submit" value="Оставить заявку" data-submit>
           </form>
 
         </div>

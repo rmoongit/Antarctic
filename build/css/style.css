@@ -1252,10 +1252,6 @@ button,
   line-height: 21px;
 }
 
-.page-form__inner input:not(:last-child) {
-  margin-bottom: 0;
-}
-
 .page-form__inner input[type=email] {
   margin-bottom: 17px;
 }
@@ -1305,6 +1301,20 @@ input[type=submit] {
   width: 100%;
   cursor: pointer;
   height: 43px;
+}
+
+input.is-error {
+  border: 2px solid #ff1553;
+}
+
+input.is-succed {
+  border: 2px solid #6aa84f;
+}
+
+strong.is-error {
+  display: inline-block;
+  color: #ff1553;
+  margin-bottom: 7px;
 }
 
 .page-info {
@@ -1393,7 +1403,7 @@ input[type=submit] {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 43px;
 }
 
 .page-footer__nav-item a {
@@ -1644,7 +1654,7 @@ input[type=submit] {
 
   .page-footer__wrapper {
     padding-top: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 46px;
   }
 
   .page-footer__nav-item a {

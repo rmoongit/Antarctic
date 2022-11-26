@@ -39,10 +39,6 @@
     line-height: 21px;
   }
 
-  input:not(:last-child) {
-    margin-bottom: 0;
-  }
-
   input[type="email"] {
     margin-bottom: 17px;
   }
@@ -102,4 +98,18 @@ input[type="submit"] {
   width: 100%;
   cursor: pointer;
   height: 43px;
+}
+
+input.is-error {
+  border: 2px solid $color-torch-red;
+}
+
+input.is-succed {
+  border: 2px solid $color-shades-apple;
+}
+
+strong.is-error {
+  display: inline-block;
+  color: $color-torch-red;
+  margin-bottom: 7px;
 }
