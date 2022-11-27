@@ -80,6 +80,23 @@
       left: -28px;
     }
 
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      background-color: $color-tangaroa;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      transition-property: width;
+      transition: $trans-600;
+    }
+
     @include vp-767 {
       display: inline-block;
       margin-bottom: 43px;

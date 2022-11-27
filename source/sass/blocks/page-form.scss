@@ -12,6 +12,11 @@
     width: 100%;
     cursor: pointer;
     height: 43px;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
   }
 
   @include vp-767 {
@@ -47,6 +52,11 @@
     color: $color-tangaroa;
     font-size: 14px;
     line-height: 21px;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
   }
 
   input.is-error {

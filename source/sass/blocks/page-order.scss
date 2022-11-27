@@ -58,65 +58,90 @@
   background-color: $color-tangaroa;
   font-size: 14px;
   line-height: 20px;
-  padding: 30px 25px 20px 25px;
-
-  h4 {
-    position: relative;
-    z-index: 5;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    margin: 0;
-  }
 
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
     height: 100%;
     width: 100%;
-  }
-
-  @include vp-1023 {
-    padding: 30px 35px 29px;
-  }
-
-  @include vp-767 {
-    padding: 30px 25px 17px;
   }
 }
 
 .page-order__item:hover {
-  img {
-    display: none;
-  }
-
   .page-order__inner {
-    display: block;
-  }
-
-  .page-order__container {
-    justify-content: flex-start;
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
   }
 }
 
 .page-order__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
+
+  h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 23px 30px 22px;
+
+    @include vp-1023 {
+      margin: 0px 35px 27px;
+    }
+
+    @include vp-767 {
+      margin: 0px 25px 17px;
+    }
+  }
 }
 
 .page-order__inner {
-  padding-top: 11px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 25px 33px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   margin: 0;
-  display: none;
-  overflow-y: auto;
+  background-color: $color-tangaroa;
+  overflow: auto;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+
+  h4 {
+    margin: 0 0 11px;
+
+    @include vp-1023 {
+      margin: 0 0 10px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 10px;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 30px 35px 35px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 34px;
+  }
 
   @include custom-scrollbar($color-link-water, $color-link-water);
 
   dl {
     margin: 0;
+    flex-grow: 1;
   }
 
   dt {
@@ -144,4 +169,9 @@
   line-height: 21px;
   font-weight: 600;
   padding: 10px;
+
+  @include hover-focus {
+    opacity: 0.8;
+    transition: $trans-default;
+  }
 }

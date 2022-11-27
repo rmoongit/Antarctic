@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initOpenMenu} from './modules/burger';
 import {initMap} from './modules/map';
 import {initValidate} from './modules/validate';
-
+document.querySelector('html').classList.remove('no-js');
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,13 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initOpenMenu();
   initValidate();
-
-  initMap('map', {
-    // При инициализации карты обязательно нужно указать
-    // её центр и коэффициент масштабирования.
-    center: [59.938635, 30.323118], // Санкт-Петербург
-    zoom: 13,
-  });
+  initMap('map');
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

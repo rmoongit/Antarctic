@@ -10,6 +10,11 @@
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/16.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg">
   <title>Антарктика</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -20,7 +25,7 @@
     <div class="page-main">
       <div class="container">
 
-        <header class="page-header no-js" data-header>
+        <header class="page-header" data-header>
 
           <div class="logo">
             <svg width="70" height="38" aria-label="Главный логотип">
@@ -28,7 +33,7 @@
             </svg>
           </div>
 
-          <button class="burger btn no-js" type="button" data-burger>
+          <button class="burger btn" type="button" data-burger>
             <span></span>
             <span></span>
             <span></span>
@@ -38,16 +43,16 @@
             <ul class="page-nav__list">
 
               <li class="page-nav__item">
-                <a href="#" aria-label="Преимущества">Преимущества</a>
+                <a href="#benefits" aria-label="Преимущества">Преимущества</a>
               </li>
               <li class="page-nav__item">
                 <a href="#" aria-label="Направления">Направления</a>
               </li>
               <li class="page-nav__item">
-                <a href="#" aria-label="Ближайшие круизы">Ближайшие круизы</a>
+                <a href="#cruises" aria-label="Ближайшие круизы">Ближайшие круизы</a>
               </li>
               <li class="page-nav__item">
-                <a href="#" aria-label="Контакты">Контакты</a>
+                <a href="#contacts" aria-label="Контакты">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -87,7 +92,7 @@
         </div>
       </section>
 
-      <section class="page-benefits">
+      <section class="page-benefits" id="benefits">
         <div class="page-benefits__wrapper container">
 
           <h3>Преимущества</h3>
@@ -118,7 +123,7 @@
         </div>
       </section>
 
-      <section class="page-order">
+      <section class="page-order" id="cruises">
         <div class="page-order__wrapper container">
           <h3>Ближайшие круизы</h3>
 
@@ -137,6 +142,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Астория&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Астория&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Аргентина&nbsp;&mdash; Фолклендские острова&nbsp;&mdash; Антарктида</dd>
@@ -167,6 +173,7 @@
               <div class=" page-order__container">
                 <h4>Круиз &#8220;Элайн&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Элайн&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Аргентина&nbsp;- Фолклендские острова&nbsp;-
@@ -198,6 +205,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Атлантис&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Атлантис&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Аргентина&nbsp;&mdash; Южная Георгия и&nbsp;Южные Сандвичевы
@@ -230,6 +238,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Одиссей&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Одиссей&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Чили - Антарктида</dd>
@@ -260,6 +269,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Олимпия&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Олимпия&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Аргентина&nbsp;&mdash; Фолклендские острова&nbsp;&mdash; Южная
@@ -293,6 +303,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Аврора&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Аврора&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Аргентина&nbsp;&mdash; Антарктида&nbsp;&mdash; Чили</dd>
@@ -323,6 +334,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Леонор&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Леонор&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Чили&nbsp;&mdash; Южная Георгия&nbsp;&mdash; Антарктида&nbsp;&mdash;
@@ -354,6 +366,7 @@
               <div class="page-order__container">
                 <h4>Круиз &#8220;Минион&nbsp;&mdash; 1&#8221;</h4>
                 <div class="page-order__inner">
+                  <h4>Круиз &#8220;Минион&nbsp;&mdash; 1&#8221;</h4>
                   <dl>
                     <dt>Маршрут</dt>
                     <dd>Аргентина&nbsp;&mdash; Антарктида</dd>
@@ -418,7 +431,7 @@
         </div>
       </section>
 
-      <section class="page-info">
+      <section class="page-info" id="contacts">
         <div class="page-info__wrapper container">
 
           <div class="page-map" id="map"></div>
@@ -450,16 +463,16 @@
           <ul class="page-nav__list page-footer__nav-list">
 
             <li class="page-footer__nav-item">
-              <a href="#" aria-label="Преимущества">Преимущества</a>
+              <a href="#benefits" aria-label="Преимущества">Преимущества</a>
             </li>
             <li class="page-footer__nav-item">
               <a href="#" aria-label="Направления">Направления</a>
             </li>
             <li class="page-footer__nav-item">
-              <a href="#" aria-label="Ближайшие круизы">Ближайшие круизы</a>
+              <a href="#cruises" aria-label="Ближайшие круизы">Ближайшие круизы</a>
             </li>
             <li class="page-footer__nav-item">
-              <a href="#" aria-label="Контакты">Контакты</a>
+              <a href="#contacts" aria-label="Контакты">Контакты</a>
             </li>
           </ul>
         </nav>

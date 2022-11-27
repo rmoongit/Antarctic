@@ -18,7 +18,7 @@
     height: 2px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     background-color: $color-alice-blue;
     transition: $trans-default;
@@ -31,23 +31,22 @@
       top: calc(50% + 5px);
     }
   }
+}
 
-  &.no-js:hover,
-  &.no-js:focus-within,
-  &.is-active {
-    span {
-      top: 50%;
-      background-color: $color-tangaroa;
-      transform: translate(-50%, 0) rotate(45deg);
-      width: 20px;
+.burger.is-active {
+  span {
+    top: 50%;
+    width: 20px;
+    left: 65%;
+    background-color: $color-tangaroa;
+    transform: translate(-50%, 0) rotate(45deg);
 
-      &:first-of-type {
-        display: none;
-      }
+    &:first-of-type {
+      display: none;
+    }
 
-      &:last-of-type {
-        transform: translate(-50%, 0%) rotate(-45deg);
-      }
+    &:last-of-type {
+      transform: translate(-50%, 0%) rotate(-45deg);
     }
   }
 }

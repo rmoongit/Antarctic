@@ -17,8 +17,9 @@
 
   @include vp-767 {
     flex-direction: column;
-    margin-left: 2px;
-    margin-top: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    row-gap: 26px;
   }
 }
 
@@ -28,6 +29,11 @@
     font-size: 16px;
     line-height: 20px;
     color: $color-alice-blue;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
 
     @include vp-1023 {
       font-size: 14px;
