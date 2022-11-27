@@ -2,68 +2,11 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initOpenMenu} from './modules/burger';
 import {initMap} from './modules/map';
+import {initValidate} from './modules/validate';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-  // const formElement = document.querySelector('[data-form]');
-  const inputElements = document.querySelectorAll('[data-validate]');
-  const buttonElement = document.querySelector('[data-submit');
-
-  const Type = {
-    tel: {
-      validate(phone) {
-        const re = /^((\+7|7|8)+([0-9]){10})$/;
-        return re.test(String(phone));
-      },
-      message: 'Начинается с +7 и без пробелов',
-    },
-    name: {
-      validate(name) {
-        const re = /[a-zA-Z]+/;
-        return re.test(String(name));
-      },
-      message: 'Имя только буквами',
-    },
-    email: {
-      validate(email) {
-        const re = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-        return re.test(String(email));
-      },
-      message: 'формат name@mail.ru',
-    },
-  };
-
-  const validHandler = () => {
-    const emptyInputs = Array.from(inputElements).filter((input) => input.value === '');
-
-    inputElements.forEach((input) => {
-      const {validate, message} = Type[input.getAttribute('data-validate')];
-      let errorElement = document.createElement('strong');
-      errorElement.classList.add('is-error');
-
-
-      if (validate(input.value)) {
-        input.classList.add('is-succed');
-        input.classList.remove('is-error');
-        input.parentElement.querySelector('strong').remove();
-      } else {
-        input.classList.add('is-error');
-        input.classList.remove('is-succed');
-        input.parentElement.append(errorElement);
-        errorElement.textContent = `${message}`;
-      }
-
-    });
-  };
-
-  // switch (input.type) {
-  //   case 'tel':
-  //     console.log(input);
-  // }
-
-  buttonElement.addEventListener('click', validHandler);
-
 
   // Utils
   // ---------------------------------
@@ -74,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   initOpenMenu();
+  initValidate();
 
   initMap('map', {
     // При инициализации карты обязательно нужно указать

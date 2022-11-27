@@ -8,15 +8,27 @@
   margin-bottom: 120px;
   padding-bottom: 50px;
 
+  @include retina {
+    background-image: url("../img/main@2x.jpg");
+  }
+
   @include vp-1023 {
     min-height: 638px;
     background-image: url("../img/main-tablet.jpg");
     margin-bottom: 100px;
+
+    @include retina {
+      background-image: url("../img/main-tablet@2x.jpg");
+    }
   }
 
   @include vp-767 {
     min-height: 500px;
     background-image: url("../img/main-mobile.jpg");
     margin-bottom: 65px;
+
+    @include retina {
+      background-image: url("../img/main-mobile@2x.jpg");
+    }
   }
 }

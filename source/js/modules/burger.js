@@ -11,6 +11,8 @@ const openMenuHandler = () => {
 
 const initOpenMenu = () => {
   buttonElement.addEventListener('click', openMenuHandler);
+  buttonElement.classList.remove('no-js');
+  headerElement.classList.remove('no-js');
 };
 
 export {initOpenMenu};

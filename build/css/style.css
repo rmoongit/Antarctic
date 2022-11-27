@@ -812,34 +812,37 @@ button,
   transition: 0.3s ease;
 }
 
-.burger span:nth-of-type(2) {
+.burger span:first-of-type {
   top: calc(50% - 5px);
 }
 
-.burger span:nth-of-type(3) {
+.burger span:last-of-type {
   top: calc(50% + 5px);
 }
 
-.burger.is-active span:nth-of-type(1) {
+.burger.no-js:hover span,
+.burger.no-js:focus-within span,
+.burger.is-active span {
+  top: 50%;
+  background-color: #011c40;
+  -webkit-transform: translate(-50%, 0) rotate(45deg);
+  -ms-transform: translate(-50%, 0) rotate(45deg);
+  transform: translate(-50%, 0) rotate(45deg);
+  width: 20px;
+}
+
+.burger.no-js:hover span:first-of-type,
+.burger.no-js:focus-within span:first-of-type,
+.burger.is-active span:first-of-type {
   display: none;
 }
 
-.burger.is-active span:nth-of-type(2) {
-  top: 50%;
-  -webkit-transform: translate(-50%, 0%) rotate(45deg);
-  -ms-transform: translate(-50%, 0%) rotate(45deg);
-  transform: translate(-50%, 0%) rotate(45deg);
-  background-color: #011c40;
-  width: 20px;
-}
-
-.burger.is-active span:nth-of-type(3) {
-  top: 50%;
+.burger.no-js:hover span:last-of-type,
+.burger.no-js:focus-within span:last-of-type,
+.burger.is-active span:last-of-type {
   -webkit-transform: translate(-50%, 0%) rotate(-45deg);
   -ms-transform: translate(-50%, 0%) rotate(-45deg);
   transform: translate(-50%, 0%) rotate(-45deg);
-  background-color: #011c40;
-  width: 20px;
 }
 
 .page-header {
@@ -853,6 +856,11 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.page-header.no-js:focus-within .page-header__nav,
+.page-header.no-js:hover .page-header__nav {
+  height: 100%;
 }
 
 .logo {
@@ -1030,12 +1038,12 @@ button,
   left: 30px;
 }
 
-.page-benefits__item--second::before {
+.page-benefits__item--ticks::before {
   background: url("../img/sprite.svg#double-tick");
   width: 38px;
 }
 
-.page-benefits__item--third::before {
+.page-benefits__item--vessel::before {
   background: url("../img/sprite.svg#vessel-zodiac");
   width: 44px;
 }
@@ -1182,6 +1190,7 @@ button,
 .page-booking {
   min-height: 555px;
   background-image: url("../img/order.jpg");
+  background-color: #d8d8d9;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: top;
@@ -1233,6 +1242,16 @@ button,
   width: 403px;
 }
 
+.page-form input[type=submit] {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  height: 43px;
+}
+
 .page-form p {
   margin: 0;
   font-weight: 500;
@@ -1252,8 +1271,23 @@ button,
   line-height: 21px;
 }
 
-.page-form__inner input[type=email] {
-  margin-bottom: 17px;
+.page-form__inner input.is-error {
+  border: 2px solid #ff1553;
+}
+
+.page-form__inner input.is-succed {
+  border: 2px solid #6aa84f;
+}
+
+.page-form__inner strong {
+  display: none;
+}
+
+.page-form__inner strong.is-error {
+  vertical-align: middle;
+  display: inline-block;
+  color: #ff1553;
+  margin-bottom: 7px;
 }
 
 .page-form__data {
@@ -1276,6 +1310,10 @@ button,
   cursor: pointer;
 }
 
+.page-form__data input[type=email] {
+  margin-bottom: 17px;
+}
+
 .page-form__data input[type=checkbox]:checked + span {
   background-image: url("../img/svg/tick.svg");
   background-repeat: no-repeat;
@@ -1291,30 +1329,6 @@ button,
   display: inline-block;
   margin-bottom: 29px;
   margin-left: 24px;
-}
-
-input[type=submit] {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 11px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  height: 43px;
-}
-
-input.is-error {
-  border: 2px solid #ff1553;
-}
-
-input.is-succed {
-  border: 2px solid #6aa84f;
-}
-
-strong.is-error {
-  display: inline-block;
-  color: #ff1553;
-  margin-bottom: 7px;
 }
 
 .page-info {
@@ -1572,11 +1586,11 @@ strong.is-error {
     width: 21px;
   }
 
-  .page-benefits__item--second::before {
+  .page-benefits__item--ticks::before {
     width: 26px;
   }
 
-  .page-benefits__item--third::before {
+  .page-benefits__item--vessel::before {
     width: 36px;
   }
 
@@ -1675,6 +1689,20 @@ strong.is-error {
   }
 }
 
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .page-main {
+    background-image: url("../img/main-tablet@2x.jpg");
+  }
+
+  .page-benefits {
+    background-image: url("../img/benefits-tablet@2x.png");
+  }
+
+  .page-booking {
+    background-image: url("../img/order-tablet@2x.jpg");
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
@@ -1725,6 +1753,8 @@ strong.is-error {
     overflow: hidden;
   }
 
+  .page-header.no-js:hover,
+  .page-header.no-js:focus-within,
   .page-header.is-active {
     -webkit-transition-property: background-color;
     -o-transition-property: background-color;
@@ -1747,19 +1777,27 @@ strong.is-error {
     width: 285px;
   }
 
+  .page-header.no-js:hover::before,
+  .page-header.no-js:focus-within::before,
   .page-header.is-active::before {
     content: "";
   }
 
+  .page-header.no-js:hover svg,
+  .page-header.no-js:focus-within svg,
   .page-header.is-active svg {
     fill: #011c40;
     margin-bottom: 33px;
   }
 
+  .page-header.no-js:hover a,
+  .page-header.no-js:focus-within a,
   .page-header.is-active a {
     color: #011c40;
   }
 
+  .page-header.no-js:hover + .page-main__page-description,
+  .page-header.no-js:focus-within + .page-main__page-description,
   .page-header.is-active + .page-main__page-description {
     opacity: 0;
   }
@@ -1952,8 +1990,36 @@ strong.is-error {
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .page-main {
+    background-image: url("../img/main-mobile@2x.jpg");
+  }
+
+  .page-benefits {
+    background-image: url("../img/benefits-mobile@2x.png");
+  }
+
+  .page-booking {
+    background-image: url("../img/order-mobile@2x.jpg");
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .page-main {
+    background-image: url("../img/main@2x.jpg");
+  }
+
+  .page-benefits {
+    background-image: url("../img/benefits@2x.png");
+  }
+
+  .page-booking {
+    background-image: url("../img/order@2x.jpg");
   }
 }

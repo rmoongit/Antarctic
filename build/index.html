@@ -20,7 +20,7 @@
     <div class="page-main">
       <div class="container">
 
-        <header class="page-header" data-header>
+        <header class="page-header no-js" data-header>
 
           <div class="logo">
             <svg width="70" height="38" aria-label="Главный логотип">
@@ -28,7 +28,7 @@
             </svg>
           </div>
 
-          <button class="burger btn" data-burger>
+          <button class="burger btn no-js" type="button" data-burger>
             <span></span>
             <span></span>
             <span></span>
@@ -100,14 +100,14 @@
                 и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
             </li>
 
-            <li class="page-benefits__item page-benefits__item--second">
+            <li class="page-benefits__item page-benefits__item--ticks">
               <h4>Система <br> все включено</h4>
               <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;.<br> Великолепные
                 блюда
                 и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
             </li>
 
-            <li class="page-benefits__item page-benefits__item--third">
+            <li class="page-benefits__item page-benefits__item--vessel">
               <h4>Экскурсионные <br> туры на&nbsp;Zodiac</h4>
               <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках
                 типа Zodiack
@@ -388,15 +388,21 @@
 
             <div class="page-form__inner">
               <label class="page-form__data" for="name">
-                <input type="text" name="name" id="name" placeholder="Имя" data-validate="name" required>
+                <strong>ошибка имени</strong>
+                <input type="text" name="name" id="name" placeholder="Имя" data-validate="name"
+                  pattern="^[A-ZА-ЯЁ]{1}[a-zа-яё]+$" required>
               </label>
 
               <label class="page-form__data" for="phone">
-                <input type="tel" name="tel" id="phone" placeholder="Телефон" data-validate="tel" required>
+                <strong>ошибка телефона</strong>
+                <input type="tel" name="tel" id="phone" placeholder="Телефон" data-validate="tel"
+                  pattern="^((\+7|7|8)+([0-9]){10})$" required>
               </label>
 
               <label class="page-form__data" for="mail">
-                <input type="email" name="email" id="mail" placeholder="Email" data-validate="email" required>
+                <strong>ошибка емайла</strong>
+                <input type="email" name="email" id="mail" placeholder="Email" data-validate="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
               </label>
 
               <label class="page-form__data" for="access">

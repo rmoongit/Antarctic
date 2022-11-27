@@ -4,6 +4,16 @@
   padding: 42px 50px 50px 50px;
   width: 403px;
 
+  input[type="submit"] {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    height: 43px;
+  }
+
   @include vp-767 {
     padding: 32px 30px 38px;
     width: 100%;
@@ -39,8 +49,23 @@
     line-height: 21px;
   }
 
-  input[type="email"] {
-    margin-bottom: 17px;
+  input.is-error {
+    border: 2px solid $color-torch-red;
+  }
+
+  input.is-succed {
+    border: 2px solid $color-shades-apple;
+  }
+
+  strong {
+    display: none;
+  }
+
+  strong.is-error {
+    vertical-align: middle;
+    display: inline-block;
+    color: $color-torch-red;
+    margin-bottom: 7px;
   }
 }
 
@@ -68,6 +93,10 @@
     }
   }
 
+  input[type="email"] {
+    margin-bottom: 17px;
+  }
+
   input[type="checkbox"]:checked + span {
     background-image: url("../img/svg/tick.svg");
     background-repeat: no-repeat;
@@ -88,28 +117,4 @@
     width: 157px;
     margin-left: 28px;
   }
-}
-
-input[type="submit"] {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 11px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  height: 43px;
-}
-
-input.is-error {
-  border: 2px solid $color-torch-red;
-}
-
-input.is-succed {
-  border: 2px solid $color-shades-apple;
-}
-
-strong.is-error {
-  display: inline-block;
-  color: $color-torch-red;
-  margin-bottom: 7px;
 }
