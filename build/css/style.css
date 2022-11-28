@@ -1192,6 +1192,7 @@ button,
 .page-order__link {
   display: inline-block;
   text-align: center;
+  vertical-align: middle;
   background-color: #f9fbfd;
   width: 100%;
   color: #011c40;
@@ -1421,6 +1422,9 @@ button,
 .page-info__address a {
   position: relative;
   margin-left: 28px;
+  -webkit-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
 }
 
 .page-info__address a::before {
@@ -1446,9 +1450,6 @@ button,
 .page-info__address a:hover::after,
 .page-info__address a:focus::after {
   width: 100%;
-  -webkit-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
   -webkit-transition: 0.6s ease;
   -o-transition: 0.6s ease;
   transition: 0.6s ease;
@@ -1495,13 +1496,6 @@ button,
 
 .page-footer__logo {
   margin-right: 40px;
-}
-
-.page-footer__logo a.focus-visible:focus {
-  opacity: 0.8;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .page-footer__nav {
@@ -1694,7 +1688,7 @@ button,
   }
 
   .page-order__container h4 {
-    margin: 0px 35px 27px;
+    margin: 0 35px 27px;
   }
 
   .page-order__inner h4 {
@@ -1976,7 +1970,7 @@ button,
   }
 
   .page-order__container h4 {
-    margin: 0px 25px 17px;
+    margin: 0 25px 17px;
   }
 
   .page-order__inner h4 {
@@ -2150,13 +2144,6 @@ button,
   }
 
   .page-footer__nav-item a:hover:not(.focus-visible) {
-    opacity: 0.8;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-
-  .page-footer__logo a:hover:not(.focus-visible) {
     opacity: 0.8;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;

@@ -1,4 +1,5 @@
 export function initMap(id) {
+  const {ymaps} = window;
   if (typeof ymaps === 'undefined') {
     return;
   }

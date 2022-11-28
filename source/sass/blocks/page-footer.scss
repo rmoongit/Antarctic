@@ -28,6 +28,7 @@
 
 .page-footer__nav-list {
   padding: 0 3px;
+
   @include vp-767 {
     margin-top: 12px;
     margin-bottom: 20px;
@@ -53,13 +54,6 @@
 }
 
 .page-footer__logo {
-  a {
-    @include hover-focus {
-      opacity: 0.8;
-      transition: $trans-default;
-    }
-  }
-
   margin-right: 40px;
 
   @include vp-1023 {

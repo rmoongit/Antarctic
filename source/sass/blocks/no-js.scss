@@ -13,8 +13,11 @@
       padding-right: 15px;
       margin-top: -20px;
     }
-    .page-nav__item a {
-      color: $color-tangaroa;
+
+    .page-nav__item {
+      a {
+        color: $color-tangaroa;
+      }
     }
   }
 

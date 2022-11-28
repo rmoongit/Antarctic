@@ -91,11 +91,11 @@
     margin: 23px 30px 22px;
 
     @include vp-1023 {
-      margin: 0px 35px 27px;
+      margin: 0 35px 27px;
     }
 
     @include vp-767 {
-      margin: 0px 25px 17px;
+      margin: 0 25px 17px;
     }
   }
 }
@@ -162,6 +162,7 @@
 .page-order__link {
   display: inline-block;
   text-align: center;
+  vertical-align: middle;
   background-color: $color-alice-blue;
   width: 100%;
   color: $color-tangaroa;

@@ -69,6 +69,7 @@
   a {
     position: relative;
     margin-left: 28px;
+    transition-property: width;
 
     &::before {
       position: absolute;
@@ -93,7 +94,6 @@
     &:hover::after,
     &:focus::after {
       width: 100%;
-      transition-property: width;
       transition: $trans-600;
     }
 

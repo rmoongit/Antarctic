@@ -85,7 +85,13 @@
 
           <div class="page-about__photo">
             <picture>
-              <img src="img/pinguins.jpg" width="560" height="301" alt="Пингвины">
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/pinguins-mobile.webp, img/pinguins-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/pinguins-tablet.webp, img/pinguins-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/pinguins.webp, img/pinguins@2x.webp 2x">
+              <img src="img/pinguins.jpg" srcset="img/pinguins@2x.jpg" width="560" height="301" loading="lazy"
+                alt="Пингвины">
             </picture>
           </div>
 
@@ -452,11 +458,9 @@
       <div class="page-footer__wrapper container">
 
         <div class="logo page-footer__logo">
-          <a href="#">
-            <svg width="70" height="38" aria-label="Главный логотип">
-              <use xlink:href="img/sprite.svg#main-logo"></use>
-            </svg>
-          </a>
+          <svg width="70" height="38" aria-label="Главный логотип">
+            <use xlink:href="img/sprite.svg#main-logo"></use>
+          </svg>
         </div>
 
         <nav class="page-nav page-footer__nav" data-nav>
