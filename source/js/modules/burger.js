@@ -1,16 +1,45 @@
-const buttonElement = document.querySelector('[data-burger]');
-const headerElement = document.querySelector('[data-header]');
-const navElement = document.querySelector('[data-nav]');
+import '../utils/focus-lock.js';
 
+const headerElement = document.querySelector('[data-header]');
+const buttonElement = headerElement.querySelector('[data-burger]');
+const navElement = headerElement.querySelector('[data-nav]');
+const elements = [buttonElement, headerElement, navElement];
 
 const openMenuHandler = () => {
-  buttonElement.classList.toggle('is-active');
-  headerElement.classList.toggle('is-active');
-  navElement.classList.toggle('is-active');
+  elements.forEach((el) => el.classList.add('is-active'));
+  document.addEventListener('keydown', keyCloseHandler);
+  window.focusLock.lock('[data-header]');
+  document.documentElement.classList.add('scroll-lock');
 };
 
+const closeMenuhandler = () => {
+  elements.forEach((el) => el.classList.remove('is-active'));
+  document.removeEventListener('keydown', keyCloseHandler);
+  window.focusLock.unlock('[data-header]');
+  document.documentElement.classList.remove('scroll-lock');
+};
+
+function keyCloseHandler(evt) {
+  if (evt.key.startsWith('Esc')) {
+    closeMenuhandler();
+  }
+}
+
+document.addEventListener('click', (e) => {
+  const isLinkTarget = e.target.nodeName === 'A';
+  if (!headerElement.contains(e.target) || isLinkTarget) {
+    closeMenuhandler();
+  }
+});
+
 const initOpenMenu = () => {
-  buttonElement.addEventListener('click', openMenuHandler);
+
+  buttonElement.addEventListener('click', () => {
+    if (headerElement.classList.contains('is-active')) {
+      return closeMenuhandler();
+    }
+    return openMenuHandler();
+  });
   buttonElement.classList.remove('no-js');
   headerElement.classList.remove('no-js');
 };

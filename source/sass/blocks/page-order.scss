@@ -170,6 +170,7 @@
   line-height: 21px;
   font-weight: 600;
   padding: 10px;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;

@@ -863,6 +863,7 @@ button,
 
 .page-nav.is-active {
   height: 100%;
+  overflow: auto;
 }
 
 .page-nav__list {
@@ -1200,6 +1201,10 @@ button,
   line-height: 21px;
   font-weight: 600;
   padding: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .page-order__link.focus-visible:focus {
