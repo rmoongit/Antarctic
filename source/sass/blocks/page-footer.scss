@@ -27,12 +27,13 @@
 }
 
 .page-footer__nav-list {
-  padding: 0 3px;
+  padding: 0 2px;
 
   @include vp-767 {
-    margin-top: 12px;
+    margin-top: 15px;
     margin-bottom: 20px;
     margin-left: 0;
+    row-gap: 8px;
   }
 }
 

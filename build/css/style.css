@@ -1483,7 +1483,7 @@ button,
 }
 
 .page-footer__nav-list {
-  padding: 0 3px;
+  padding: 0 2px;
 }
 
 .page-footer__nav-item a {
@@ -1916,6 +1916,7 @@ button,
   .page-description p {
     font-size: 16px;
     line-height: 22px;
+    width: 232px;
   }
 
   .page-about {
@@ -2070,9 +2071,10 @@ button,
   }
 
   .page-footer__nav-list {
-    margin-top: 12px;
+    margin-top: 15px;
     margin-bottom: 20px;
     margin-left: 0;
+    row-gap: 8px;
   }
 
   .page-footer__icons {
