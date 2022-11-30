@@ -46,7 +46,8 @@
     right: 0;
     top: 0;
     height: 100%;
-    width: 285px;
+    width: 89%;
+    overflow: visible;
 
     &::before {
       content: "";

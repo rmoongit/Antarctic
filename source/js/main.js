@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initOpenMenu} from './modules/burger';
 import {initMap} from './modules/map';
-import {initValidate} from './modules/validate';
+import {initValidate, initStorage} from './modules/validate';
 document.querySelector('html').classList.remove('no-js');
 // ---------------------------------
 
@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initOpenMenu();
   initValidate();
+  initStorage();
   initMap('map');
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

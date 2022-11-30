@@ -3,14 +3,12 @@
     .page-header__nav {
       width: calc(100% + 30px);
       margin-bottom: 15px;
-      padding-bottom: 15px;
       height: auto;
       order: -1;
       background-color: $color-default-white;
       margin-left: -15px;
       margin-right: -15px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding: 15px;
       margin-top: -20px;
     }
 

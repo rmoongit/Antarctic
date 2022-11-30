@@ -11,7 +11,7 @@ const Type = {
   },
   name: {
     validate(name) {
-      const re = /^[A-ZА-ЯЁ]{1}[a-zа-яё]+$/;
+      const re = /^[A-Za-zА-Яа-яёЁ]+(?:[-'\s][A-Za-zА-Яа-яёЁ]+)*$/;
       return re.test(String(name));
     },
     message: 'Формат: Имя',
@@ -56,4 +56,31 @@ const initValidate = () => {
   });
 };
 
-export {initValidate};
+const initStorage = () => {
+
+  inputElements.forEach((input) => {
+    const {type, id} = input;
+    const identify = `${id}`;
+
+    input.addEventListener('change', () => {
+      localStorage.setItem(identify, input.value);
+    });
+
+    if (type === 'password') {
+      return;
+    }
+
+    try {
+      const value = localStorage.getItem(identify);
+
+      if (value !== null) {
+        input.value = value;
+      }
+
+    } catch (error) {
+      return;
+    }
+  });
+};
+
+export {initValidate, initStorage};

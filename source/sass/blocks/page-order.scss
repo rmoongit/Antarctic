@@ -66,11 +66,16 @@
   }
 }
 
-.page-order__item:hover {
+.page-order__item:hover,
+.page-order__item:focus-within {
   .page-order__inner {
+    outline: solid $color-tangaroa;
+    outline-offset: 3px;
+    border-radius: 3px;
     opacity: 1;
     z-index: 2;
     visibility: visible;
+    transition: 0.2s;
   }
 }
 
@@ -112,7 +117,6 @@
   background-color: $color-tangaroa;
   overflow: auto;
   height: 100%;
-  transition: 0.3s;
   opacity: 0;
   z-index: -1;
   visibility: hidden;

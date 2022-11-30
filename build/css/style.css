@@ -777,12 +777,59 @@ button,
 .page-main {
   position: relative;
   min-height: 650px;
-  background-image: url("../img/main.jpg");
   background-color: #011c40;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 120px;
   padding-bottom: 50px;
+}
+
+@supports (background-image: url("../img/main.webp")) {
+  .page-main {
+    background-image: url("../img/main.webp");
+  }
+
+@media (max-width: 1023px) {
+    .page-main {
+      background-image: url("../img/main-tablet.webp");
+    }
+}
+
+@media (max-width: 767px) {
+    .page-main {
+      background-image: url("../img/main-mobile.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-main {
+      background-image: url("../img/main@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1023px), (min-resolution: 144dpi) and (max-width: 1023px), (min-resolution: 1.5dppx) and (max-width: 1023px) {
+    .page-main {
+      background-image: url("../img/main-tablet@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px) {
+    .page-main {
+      background-image: url("../img/main-mobile@2x.webp");
+    }
+}
+}
+
+@supports not (background-image: url("../img/main.webp")) {
+  .page-main {
+    background-image: url("../img/main.jpg");
+  }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-main {
+      background-image: url("../img/main@2x.jpg");
+    }
+}
 }
 
 .burger {
@@ -968,10 +1015,57 @@ button,
   padding: 110px 0;
   min-height: 562px;
   background-color: #e3ecf6;
-  background-image: url("../img/benefits.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@supports (background-image: url("../img/benefits.webp")) {
+  .page-benefits {
+    background-image: url("../img/benefits.webp");
+  }
+
+@media (max-width: 1023px) {
+    .page-benefits {
+      background-image: url("../img/benefits-tablet.webp");
+    }
+}
+
+@media (max-width: 767px) {
+    .page-benefits {
+      background-image: url("../img/benefits-mobile.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-benefits {
+      background-image: url("../img/benefits@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1023px), (min-resolution: 144dpi) and (max-width: 1023px), (min-resolution: 1.5dppx) and (max-width: 1023px) {
+    .page-benefits {
+      background-image: url("../img/benefits-tablet@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px) {
+    .page-benefits {
+      background-image: url("../img/benefits-mobile@2x.webp");
+    }
+}
+}
+
+@supports not (background-image: url("../img/benefits.webp")) {
+  .page-benefits {
+    background-image: url("../img/benefits.jpg");
+  }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-benefits {
+      background-image: url("../img/benefits@2x.jpg");
+    }
+}
 }
 
 .page-benefits__wrapper h3 {
@@ -1090,10 +1184,17 @@ button,
   width: 100%;
 }
 
-.page-order__item:hover .page-order__inner {
+.page-order__item:hover .page-order__inner,
+.page-order__item:focus-within .page-order__inner {
+  outline: solid #011c40;
+  outline-offset: 3px;
+  border-radius: 3px;
   opacity: 1;
   z-index: 2;
   visibility: visible;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .page-order__container {
@@ -1138,9 +1239,6 @@ button,
   background-color: #011c40;
   overflow: auto;
   height: 100%;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   opacity: 0;
   z-index: -1;
   visibility: hidden;
@@ -1216,11 +1314,58 @@ button,
 
 .page-booking {
   min-height: 555px;
-  background-image: url("../img/order.jpg");
   background-color: #d8d8d9;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: top;
+}
+
+@supports (background-image: url("../img/order.webp")) {
+  .page-booking {
+    background-image: url("../img/order.webp");
+  }
+
+@media (max-width: 1023px) {
+    .page-booking {
+      background-image: url("../img/order-tablet.webp");
+    }
+}
+
+@media (max-width: 767px) {
+    .page-booking {
+      background-image: url("../img/order-mobile.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-booking {
+      background-image: url("../img/order@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1023px), (min-resolution: 144dpi) and (max-width: 1023px), (min-resolution: 1.5dppx) and (max-width: 1023px) {
+    .page-booking {
+      background-image: url("../img/order-tablet@2x.webp");
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px) {
+    .page-booking {
+      background-image: url("../img/order-mobile@2x.webp");
+    }
+}
+}
+
+@supports not (background-image: url("../img/order.webp")) {
+  .page-booking {
+    background-image: url("../img/order.jpg");
+  }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-booking {
+      background-image: url("../img/order@2x.jpg");
+    }
+}
 }
 
 .page-booking__wrapper {
@@ -1306,7 +1451,7 @@ button,
 }
 
 .page-form__inner input.focus-visible:focus {
-  opacity: 0.8;
+  background-color: #e3ecf6;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -1348,7 +1493,6 @@ button,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   top: 40%;
-  cursor: pointer;
 }
 
 .page-form__data input[type=email] {
@@ -1362,11 +1506,12 @@ button,
 }
 
 .page-form__data input[type=checkbox]:focus + span {
-  -webkit-box-shadow: 0 0 0 1px #f9fbfd;
-  box-shadow: 0 0 0 1px #f9fbfd;
+  -webkit-box-shadow: 0 0 3px 1px #d8d8d9;
+  box-shadow: 0 0 3px 1px #d8d8d9;
 }
 
 .page-form__data:last-of-type {
+  cursor: pointer;
   display: inline-block;
   margin-bottom: 29px;
   margin-left: 24px;
@@ -1395,7 +1540,7 @@ button,
   color: #011c40;
 }
 
-.page-info__address h5 {
+.page-info__address h4 {
   margin: 0;
   margin-bottom: 25px;
   font-weight: 500;
@@ -1576,7 +1721,6 @@ button,
 
   .page-main {
     min-height: 638px;
-    background-image: url("../img/main-tablet.jpg");
     margin-bottom: 100px;
   }
 
@@ -1642,7 +1786,6 @@ button,
 
   .page-benefits {
     padding: 89px 0 100px;
-    background-image: url("../img/benefits-tablet.png");
   }
 
   .page-benefits__wrapper h3 {
@@ -1704,10 +1847,6 @@ button,
     padding: 30px 35px 35px;
   }
 
-  .page-booking {
-    background-image: url("../img/order-tablet.jpg");
-  }
-
   .page-booking__wrapper {
     padding-top: 88px;
     padding-bottom: 100px;
@@ -1742,7 +1881,7 @@ button,
     column-gap: 30px;
   }
 
-  .page-info__address h5 {
+  .page-info__address h4 {
     margin-bottom: 25px;
   }
 
@@ -1781,20 +1920,6 @@ button,
   }
 }
 
-@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .page-main {
-    background-image: url("../img/main-tablet@2x.jpg");
-  }
-
-  .page-benefits {
-    background-image: url("../img/benefits-tablet@2x.png");
-  }
-
-  .page-booking {
-    background-image: url("../img/order-tablet@2x.jpg");
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
@@ -1815,7 +1940,6 @@ button,
 
   .page-main {
     min-height: 500px;
-    background-image: url("../img/main-mobile.jpg");
     margin-bottom: 65px;
   }
 
@@ -1864,7 +1988,8 @@ button,
     right: 0;
     top: 0;
     height: 100%;
-    width: 285px;
+    width: 89%;
+    overflow: visible;
   }
 
   .page-header.is-active::before {
@@ -1941,7 +2066,6 @@ button,
   }
 
   .page-benefits {
-    background-image: url("../img/benefits-mobile.png");
     padding: 56px 0 64px;
   }
 
@@ -1985,10 +2109,6 @@ button,
 
   .page-order__inner {
     padding: 30px 25px 34px;
-  }
-
-  .page-booking {
-    background-image: url("../img/order-mobile.jpg");
   }
 
   .page-booking__wrapper {
@@ -2085,7 +2205,6 @@ button,
   .no-js .page-header__nav {
     width: calc(100% + 30px);
     margin-bottom: 15px;
-    padding-bottom: 15px;
     height: auto;
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -2093,27 +2212,12 @@ button,
     background-color: #ffffff;
     margin-left: -15px;
     margin-right: -15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     margin-top: -20px;
   }
 
   .no-js .page-nav__item a {
     color: #011c40;
-  }
-}
-
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .page-main {
-    background-image: url("../img/main-mobile@2x.jpg");
-  }
-
-  .page-benefits {
-    background-image: url("../img/benefits-mobile@2x.png");
-  }
-
-  .page-booking {
-    background-image: url("../img/order-mobile@2x.jpg");
   }
 }
 
@@ -2144,7 +2248,7 @@ button,
   }
 
   .page-form__inner input:hover:not(.focus-visible) {
-    opacity: 0.8;
+    background-color: #e3ecf6;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
@@ -2162,19 +2266,5 @@ button,
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .page-main {
-    background-image: url("../img/main@2x.jpg");
-  }
-
-  .page-benefits {
-    background-image: url("../img/benefits@2x.png");
-  }
-
-  .page-booking {
-    background-image: url("../img/order@2x.jpg");
   }
 }

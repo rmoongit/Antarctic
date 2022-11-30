@@ -54,7 +54,7 @@
     line-height: 21px;
 
     @include hover-focus {
-      opacity: 0.8;
+      background-color: $color-solitude;
       transition: $trans-default;
     }
   }
@@ -93,7 +93,6 @@
     left: -12px;
     transform: translate(-50%, -50%);
     top: 40%;
-    cursor: pointer;
 
     @include vp-767 {
       left: -18px;
@@ -114,11 +113,12 @@
   }
 
   input[type="checkbox"]:focus + span {
-    box-shadow: 0 0 0 1px $color-alice-blue;
+    box-shadow: 0 0 3px 1px $color-quartz;
   }
 }
 
 .page-form__data:last-of-type {
+  cursor: pointer;
   display: inline-block;
   margin-bottom: 29px;
   margin-left: 24px;

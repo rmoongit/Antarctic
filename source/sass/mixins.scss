@@ -4,6 +4,40 @@
   }
 }
 
+@mixin background-image($filename, $ext: "jpg") {
+  @supports (background-image: url("../img/#{$filename}.webp")) {
+    background-image: url("../img/#{$filename}.webp");
+
+    @include vp-1023 {
+      background-image: url("../img/#{$filename}-tablet.webp");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/#{$filename}-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/#{$filename}@2x.webp");
+
+      @include vp-1023 {
+        background-image: url("../img/#{$filename}-tablet@2x.webp");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/#{$filename}-mobile@2x.webp");
+      }
+    }
+  }
+
+  @supports not (background-image: url("../img/#{$filename}.webp")) {
+    background-image: url("../img/#{$filename}.#{$ext}");
+
+    @include retina {
+      background-image: url("../img/#{$filename}@2x.#{$ext}");
+    }
+  }
+}
+
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
