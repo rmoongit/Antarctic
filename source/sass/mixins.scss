@@ -90,6 +90,12 @@
   }
 }
 
+@mixin vp-320 {
+  @media (max-width: ($vp-320)) {
+    @content;
+  }
+}
+
 @mixin custom-scrollbar($color-thumb, $color-track) {
   scrollbar-color: $color-thumb $color-track;
   scrollbar-width: thin;

@@ -13,6 +13,11 @@
     padding: 57px 25px 65px;
   }
 
+  @include vp-320 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   h3 {
     color: $color-tangaroa;
     margin: 0;
@@ -38,17 +43,18 @@
 .page-order__list {
   display: grid;
   grid-template-columns: repeat(4, 23%);
+  justify-content: center;
   gap: 30px;
   margin: 0;
   padding: 0;
   list-style: none;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 47.7%);
+    grid-template-columns: repeat(2, minmax(309px, 386px));
   }
 
   @include vp-767 {
-    grid-template-columns: 100%;
+    grid-template-columns: minmax(270px, 386px);
   }
 }
 
@@ -175,6 +181,7 @@
   font-weight: 600;
   padding: 10px;
   user-select: none;
+  word-break: break-word;
 
   @include hover-focus {
     opacity: 0.8;

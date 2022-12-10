@@ -2,11 +2,10 @@
   padding: 0;
   margin-bottom: 7px;
   background-color: transparent;
-  width: 26px;
+  width: 24px;
   height: 20px;
   position: relative;
   z-index: 10;
-  overflow: hidden;
   display: none;
 
   @include vp-767 {
@@ -34,10 +33,12 @@
 }
 
 .burger.is-active {
+  width: 17px;
+
   span {
     top: 50%;
-    width: 20px;
-    left: 65%;
+    width: 16px;
+    left: 58%;
     background-color: $color-tangaroa;
     transform: translate(-50%, 0) rotate(45deg);
 

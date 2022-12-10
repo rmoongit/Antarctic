@@ -1,32 +1,25 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {initOpenMenu} from './modules/burger';
 import {initMap} from './modules/map';
 import {initValidate, initStorage} from './modules/validate';
-document.querySelector('html').classList.remove('no-js');
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
+  document.querySelector('html').classList.remove('no-js');
   // Utils
   // ---------------------------------
-
   iosVhFix();
 
   // Modules
   // ---------------------------------
-
   initOpenMenu();
-  initValidate();
-  initStorage();
-  initMap('map');
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-
-    initModals();
-
+    initMap('map');
+    initValidate();
+    initStorage();
   });
 });
 

@@ -2,10 +2,10 @@
   position: relative;
   min-height: 650px;
   background-color: $color-tangaroa;
-  background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 120px;
   padding-bottom: 50px;
+  background-position: center;
 
   @include background-image("main");
 

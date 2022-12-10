@@ -20,7 +20,7 @@
 
   @include vp-767 {
     padding-top: 40px;
-    padding-bottom: 33px;
+    padding-bottom: 36px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -64,10 +64,13 @@
 
 .page-footer__nav {
   overflow: auto;
+  margin-right: 30px;
 }
 
 .page-footer__icons {
+  max-width: 114px;
   display: flex;
+  flex-shrink: 0;
   flex-wrap: wrap;
   margin-left: auto;
   gap: 27px;

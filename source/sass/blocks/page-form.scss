@@ -4,14 +4,17 @@
   padding: 42px 50px 50px 50px;
   width: 403px;
 
-  input[type="submit"] {
+  button[type="submit"] {
     font-size: 14px;
     font-weight: 600;
     padding: 11px;
     border: none;
     width: 100%;
     cursor: pointer;
-    height: 43px;
+    min-height: 43px;
+    word-break: break-word;
+    outline: none;
+    background-color: $color-alice-blue;
 
     @include hover-focus {
       opacity: 0.8;
@@ -20,7 +23,7 @@
   }
 
   @include vp-767 {
-    padding: 32px 30px 38px;
+    padding: 32px 30px 40px;
     width: 100%;
   }
 
@@ -52,6 +55,7 @@
     color: $color-tangaroa;
     font-size: 14px;
     line-height: 21px;
+    outline: none;
 
     @include hover-focus {
       background-color: $color-solitude;
@@ -90,7 +94,7 @@
     width: 18px;
     height: 18px;
     background-color: $color-default-white;
-    left: -12px;
+    left: -15px;
     transform: translate(-50%, -50%);
     top: 40%;
 
@@ -103,7 +107,15 @@
   }
 
   input[type="email"] {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
+
+    @include vp-767 {
+      margin-bottom: 17px;
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-bottom: 0;
   }
 
   input[type="checkbox"]:checked + span {
@@ -112,7 +124,11 @@
     background-position: center;
   }
 
-  input[type="checkbox"]:focus + span {
+  input[type="checkbox"]:hover + span {
+    box-shadow: 0 0 3px 1px $color-quartz;
+  }
+
+  input[type="checkbox"]:checked:focus + span {
     box-shadow: 0 0 3px 1px $color-quartz;
   }
 }
@@ -123,8 +139,13 @@
   margin-bottom: 29px;
   margin-left: 24px;
 
+  @include vp-1023 {
+    margin-bottom: 31px;
+  }
+
   @include vp-767 {
     width: 157px;
     margin-left: 28px;
+    margin-bottom: 27px;
   }
 }
