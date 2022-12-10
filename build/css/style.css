@@ -669,7 +669,7 @@ button,
   background-size: cover;
   margin-bottom: 120px;
   padding-bottom: 50px;
-  background-position: center;
+  background-position: 50% 100%;
 }
 
 @supports (background-image: url("../img/main.webp")) {
@@ -729,6 +729,7 @@ button,
   position: relative;
   z-index: 10;
   display: none;
+  border: none;
 }
 
 .burger span {
@@ -801,7 +802,7 @@ button,
 
 .page-nav.is-active {
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .page-nav__list {
@@ -1893,9 +1894,9 @@ button,
     left: auto;
     right: 0;
     top: 0;
+    bottom: 0;
     height: 100%;
     width: 89%;
-    overflow: visible;
   }
 
   .page-header.is-active::before {
@@ -1928,6 +1929,7 @@ button,
     margin-left: 10px;
     margin-top: 5px;
     row-gap: 25px;
+    padding-bottom: 80px;
   }
 
   .page-nav__item a {
@@ -2110,6 +2112,7 @@ button,
     margin-bottom: 20px;
     margin-left: 0;
     row-gap: 8px;
+    padding-bottom: 0;
   }
 
   .page-footer__icons {

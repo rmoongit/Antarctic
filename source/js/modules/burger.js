@@ -33,7 +33,6 @@ document.addEventListener('click', (e) => {
 });
 
 const initOpenMenu = () => {
-
   buttonElement.addEventListener('click', () => {
     if (headerElement.classList.contains('is-active')) {
       return closeMenuhandler();

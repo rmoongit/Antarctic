@@ -7,6 +7,7 @@
   position: relative;
   z-index: 10;
   display: none;
+  border: none;
 
   @include vp-767 {
     display: block;

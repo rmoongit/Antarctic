@@ -68,7 +68,7 @@ const createWebp = () => {
   const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
+      .pipe(webp({quality: 70}))
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
