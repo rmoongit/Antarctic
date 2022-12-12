@@ -670,6 +670,8 @@ button,
   margin-bottom: 120px;
   padding-bottom: 50px;
   background-position: 50% 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 1px 4px 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 1px 4px 4px;
 }
 
 @supports (background-image: url("../img/main.webp")) {
@@ -1311,6 +1313,7 @@ button,
 }
 
 .page-form button[type=submit] {
+  color: #011c40;
   font-size: 14px;
   font-weight: 600;
   padding: 11px;
@@ -1328,6 +1331,10 @@ button,
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+.page-form button[type=submit]:disabled {
+  background-color: #d8d8d9;
 }
 
 .page-form p {
@@ -1626,6 +1633,8 @@ button,
   }
 
   .page-main {
+    -webkit-box-shadow: none;
+    box-shadow: none;
     min-height: 638px;
     margin-bottom: 100px;
   }

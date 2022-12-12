@@ -6,10 +6,12 @@
   margin-bottom: 120px;
   padding-bottom: 50px;
   background-position: 50% 100%;
+  box-shadow: $shadow;
 
   @include background-image("main");
 
   @include vp-1023 {
+    box-shadow: none;
     min-height: 638px;
     margin-bottom: 100px;
   }

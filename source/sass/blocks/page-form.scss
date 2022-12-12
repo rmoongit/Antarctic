@@ -5,6 +5,7 @@
   width: 403px;
 
   button[type="submit"] {
+    color: $color-tangaroa;
     font-size: 14px;
     font-weight: 600;
     padding: 11px;
@@ -20,6 +21,10 @@
       opacity: 0.8;
       transition: $trans-default;
     }
+  }
+
+  button[type="submit"]:disabled {
+    background-color: $color-quartz;
   }
 
   @include vp-767 {

@@ -29,7 +29,7 @@ export function initMap(id) {
           // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/sprite/pointer.svg',
+            iconImageHref: '/img/sprite/pointer.svg',
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38],
