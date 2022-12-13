@@ -50,11 +50,11 @@
   list-style: none;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, minmax(309px, 386px));
+    grid-template-columns: repeat(auto-fill, 309px);
   }
 
   @include vp-767 {
-    grid-template-columns: minmax(270px, 386px);
+    grid-template-columns: minmax(270px, 309px);
   }
 }
 

@@ -4,10 +4,10 @@ const buttonElement = document.querySelector('[data-submit');
 const Type = {
   tel: {
     validate(phone) {
-      const re = /^\+?\d{7,13}$/;
+      const re = /^\+7\(\d{3}\)\d{7}$/;
       return re.test(String(phone));
     },
-    message: 'Формат: +71111111111',
+    message: 'Формат: +7(111)1111111',
   },
   name: {
     validate(name) {

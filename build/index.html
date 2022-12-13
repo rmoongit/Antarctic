@@ -438,22 +438,14 @@
                     id="phone"
                     placeholder="Телефон"
                     data-validate="tel"
-                    pattern="^\+?\d{7,13}$"
+                    pattern="^\+7\(\d{3}\)\d{7}$"
                     required
                   />
                 </label>
 
                 <label class="page-form__data" for="mail">
                   <strong>ошибка емайла</strong>
-                  <input
-                    type="email"
-                    name="email"
-                    id="mail"
-                    placeholder="Email"
-                    data-validate="email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                    required
-                  />
+                  <input type="email" name="email" id="mail" placeholder="Email" data-validate="email" required />
                 </label>
 
                 <label class="page-form__data" for="access">

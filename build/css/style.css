@@ -1746,8 +1746,7 @@ button,
   }
 
   .page-order__list {
-    -ms-grid-columns: (minmax(309px, 386px))[2];
-    grid-template-columns: repeat(2, minmax(309px, 386px));
+    grid-template-columns: repeat(auto-fill, 309px);
   }
 
   .page-order__container h4 {
@@ -2012,8 +2011,8 @@ button,
   }
 
   .page-order__list {
-    -ms-grid-columns: minmax(270px, 386px);
-    grid-template-columns: minmax(270px, 386px);
+    -ms-grid-columns: minmax(270px, 309px);
+    grid-template-columns: minmax(270px, 309px);
   }
 
   .page-order__container h4 {
