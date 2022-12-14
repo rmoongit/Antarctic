@@ -1335,6 +1335,7 @@ button,
 
 .page-form button[type=submit]:disabled {
   background-color: #d8d8d9;
+  pointer-events: none;
 }
 
 .page-form p {
@@ -1366,10 +1367,12 @@ button,
 
 .page-form__inner input.is-error {
   border: 2px solid #ff1553;
+  border-radius: 3px;
 }
 
 .page-form__inner input.is-succed {
   border: 2px solid #6aa84f;
+  border-radius: 3px;
 }
 
 .page-form__inner strong {
