@@ -25,6 +25,7 @@
 
   button[type="submit"]:disabled {
     background-color: $color-quartz;
+    pointer-events: none;
   }
 
   @include vp-767 {
@@ -70,10 +71,12 @@
 
   input.is-error {
     border: 2px solid $color-torch-red;
+    border-radius: 3px;
   }
 
   input.is-succed {
     border: 2px solid $color-shades-apple;
+    border-radius: 3px;
   }
 
   strong {

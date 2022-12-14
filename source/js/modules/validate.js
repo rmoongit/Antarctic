@@ -1,13 +1,14 @@
-const inputElements = document.querySelectorAll('[data-validate]');
-const buttonElement = document.querySelector('[data-submit');
+const formElement = document.querySelector('[data-form]');
+const inputElements = formElement.querySelectorAll('[data-validate]');
 
+// валидация по типу элемента
 const Type = {
   tel: {
     validate(phone) {
-      const re = /^\+7\(\d{3}\)\d{7}$/;
+      const re = /^\+?[\d ()-]+$/;
       return re.test(String(phone));
     },
-    message: 'Формат: +7(111)1111111',
+    message: 'Формат: только цифры',
   },
   name: {
     validate(name) {
@@ -25,19 +26,18 @@ const Type = {
   },
 };
 
-const validHandler = () => {
+// валидация формы
+const handleValidation = () => {
 
   inputElements.forEach((input) => {
     const {validate, message} = Type[input.getAttribute('data-validate')];
 
-    if (validate(input.value)) {
-      input.classList.add('is-succed');
-      input.classList.remove('is-error');
-      buttonElement.disabled = false;
-    } else {
+    if (!validate(input.value)) {
       input.classList.add('is-error');
       input.classList.remove('is-succed');
-      buttonElement.disabled = true;
+    } else {
+      input.classList.add('is-succed');
+      input.classList.remove('is-error');
     }
 
     if (input.classList.contains('is-error')) {
@@ -50,12 +50,21 @@ const validHandler = () => {
   });
 };
 
+// инициализация валидатора
 const initValidate = () => {
+
   inputElements.forEach((input) => {
-    input.addEventListener('change', validHandler);
+    input.addEventListener('input', () => {
+
+      if (input.type === 'tel') {
+        input.value = input.value.replace(/[A-Za-zА-Яа-яЁё]/, '');
+      }
+      handleValidation();
+    });
   });
 };
 
+// local storage
 const initStorage = () => {
 
   inputElements.forEach((input) => {
